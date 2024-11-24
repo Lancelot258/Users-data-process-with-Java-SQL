@@ -6,6 +6,7 @@ Thumbs.db
 /build/
 /dist/
 /out/
+/src/out/
 
 # 日志文件
 *.log
