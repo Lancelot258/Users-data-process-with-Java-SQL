@@ -14,8 +14,8 @@ import java.util.List;
 public class IngestCSV {
 
     public static void main(String[] args) {
-        String dbUrl = "jdbc:sqlite:/Users/lancelot/Documents/NYU/study/ECE_Java/Assignment9/Assignment9/corporatedata.db";
-        String csvFilePath = "/Users/lancelot/Documents/NYU/study/ECE_Java/Assignment9/Assignment9/customers-100.csv";
+        String dbUrl = "jdbc:sqlite:/Users/path/yourdatabase.db";
+        String csvFilePath = "/Users/path/customers-100.csv";
 
         // SQL statement to create the table
         String createTableSQL = "CREATE TABLE IF NOT EXISTS testdb ("

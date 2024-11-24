@@ -238,7 +238,7 @@ class CustomerDisplay extends JFrame {
     }
 
     public static void main(String[] args) {
-        JFrame customerDisplay = new CustomerDisplay("jdbc:sqlite:/Users/lancelot/Documents/NYU/study/ECE_Java/Assignment9/Assignment9/corporatedata.db");
+        JFrame customerDisplay = new CustomerDisplay("jdbc:sqlite:/Users/path/database.db");
         customerDisplay.setVisible(true);
         customerDisplay.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

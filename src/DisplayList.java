@@ -42,7 +42,7 @@ public class DisplayList extends JFrame {
 		customer.setSubscriptionDate(subDateField.getText());
 		customer.setWebsite(websiteField.getText());
 
-		try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/lancelot/Documents/NYU/study/ECE_Java/Assignment9/Assignment9/corporatedata.db")) {
+		try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/path/database.db")) {
 			String updateSQL = "UPDATE testdb SET first_name = ?, last_name = ?, company = ?, city = ?, country = ?, phone1 = ?, phone2 = ?, email = ?, subscription_date = ?, website = ? WHERE customer_unique_id = ?";
 			try (PreparedStatement pstmt = conn.prepareStatement(updateSQL)) {
 				pstmt.setString(1, customer.getFirstName());
@@ -76,7 +76,7 @@ public class DisplayList extends JFrame {
 	}
 	private void deleteCustomer(Customer customer) {
 		System.out.println("Deleting customer: " + customer.getCustomerId());
-		try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/lancelot/Documents/NYU/study/ECE_Java/Assignment9/Assignment9/corporatedata.db")) {
+		try (Connection conn = DriverManager.getConnection("jdbc:sqlite:/Users/path/database.db")) {
 			String deleteSQL = "DELETE FROM testdb WHERE customer_unique_id = ?";
 			try (PreparedStatement pstmt = conn.prepareStatement(deleteSQL)) {
 				pstmt.setString(1, customer.getCustomerId());
